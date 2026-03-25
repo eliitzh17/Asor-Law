@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.barone-law.co.il)",
+      "WebFetch(domain:tasalaw.co.il)",
+      "WebFetch(domain:www.lalum.co)",
+      "WebFetch(domain:www.wblaw.co.il)",
+      "WebSearch",
+      "Bash(node build.js)",
+      "Bash(npx serve:*)",
+      "Bash(curl -sL \"https://commons.wikimedia.org/wiki/Special:FilePath/Clalit_Medical_Center,_Mekor_Baruch.jpg\" -o /dev/null -w \"%{url_effective}\")",
+      "Bash(node:*)"
+    ]
+  }
+}
