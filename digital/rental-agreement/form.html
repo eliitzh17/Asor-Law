@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שאלון - הסכם שכירות דירת מגורים | עשור ושות׳</title>
+    <meta name="description" content="שאלון להפקת הסכם שכירות דירת מגורים. ממלאים את הפרטים, משלמים, ומקבלים את הקובץ במייל.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="icon" href="../../images/logo-mark.png" type="image/png">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body class="form-body">
+
+    <!-- ===== Minimal Header ===== -->
+    <header class="form-header">
+        <div class="container">
+            <a href="../" class="form-back">← חזרה לפרטי המוצר</a>
+            <a href="../../" class="form-logo">
+                <img src="../../images/logo-he.png" alt="עשור ושות׳ - עורכי דין">
+            </a>
+        </div>
+    </header>
+
+    <main class="form-main">
+        <div class="container">
+
+            <!-- ===== Step indicator ===== -->
+            <div class="form-progress" aria-label="התקדמות בשאלון">
+                <div class="form-progress-bar">
+                    <div class="form-progress-fill" id="progressFill" style="width: 16.6%"></div>
+                </div>
+                <div class="form-progress-steps">
+                    <span class="step active" data-step="1">המשכיר</span>
+                    <span class="step" data-step="2">השוכר</span>
+                    <span class="step" data-step="3">הנכס</span>
+                    <span class="step" data-step="4">תנאים</span>
+                    <span class="step" data-step="5">ערבויות</span>
+                    <span class="step" data-step="6">סקירה</span>
+                </div>
+            </div>
+
+            <form id="rentalForm" novalidate>
+
+                <!-- ===== Step 1: Landlord ===== -->
+                <section class="form-step active" data-step="1">
+                    <div class="form-step-header">
+                        <span class="form-step-num">שלב 1 מתוך 6</span>
+                        <h2>פרטי המשכיר</h2>
+                        <p class="form-step-lede">מי הבעלים של הנכס? אלו הפרטים שיופיעו בראש החוזה.</p>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="landlord_name">שם מלא <span class="req">*</span></label>
+                            <input type="text" id="landlord_name" name="landlord_name" required autocomplete="name" placeholder="לדוגמה: ישראל ישראלי">
+                        </div>
+                        <div class="form-field">
+                            <label for="landlord_id">תעודת זהות <span class="req">*</span></label>
+                            <input type="text" id="landlord_id" name="landlord_id" required pattern="[0-9]{9}" maxlength="9" inputmode="numeric" placeholder="9 ספרות, ללא מקפים">
+                        </div>
+                        <div class="form-field form-field-wide">
+                            <label for="landlord_street">כתובת מגורים – רחוב ומספר <span class="req">*</span></label>
+                            <input type="text" id="landlord_street" name="landlord_street" required autocomplete="street-address" placeholder="לדוגמה: יפו 45">
+                        </div>
+                        <div class="form-field">
+                            <label for="landlord_city">עיר <span class="req">*</span></label>
+                            <input type="text" id="landlord_city" name="landlord_city" required autocomplete="address-level2" placeholder="לדוגמה: ירושלים">
+                        </div>
+                        <div class="form-field">
+                            <label for="landlord_phone">טלפון נייד <span class="req">*</span></label>
+                            <input type="tel" id="landlord_phone" name="landlord_phone" required pattern="0[2-9][0-9]{7,8}" autocomplete="tel" placeholder="לדוגמה: 0501234567">
+                        </div>
+                        <div class="form-field form-field-wide">
+                            <label for="landlord_email">דוא"ל <span class="req">*</span></label>
+                            <input type="email" id="landlord_email" name="landlord_email" required autocomplete="email" placeholder="name@example.com">
+                            <small class="form-help">לכתובת זו יישלח עותק חתום מההסכם והחשבונית.</small>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== Step 2: Tenant ===== -->
+                <section class="form-step" data-step="2">
+                    <div class="form-step-header">
+                        <span class="form-step-num">שלב 2 מתוך 6</span>
+                        <h2>פרטי השוכר</h2>
+                        <p class="form-step-lede">מי שוכר את הנכס. אם יש מספר שוכרים — מלאו את פרטי השוכר הראשי כאן, ניתן יהיה להוסיף שוכרים נוספים בשדה הערות בהמשך.</p>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="tenant_name">שם מלא <span class="req">*</span></label>
+                            <input type="text" id="tenant_name" name="tenant_name" required placeholder="לדוגמה: דנה כהן">
+                        </div>
+                        <div class="form-field">
+                            <label for="tenant_id">תעודת זהות <span class="req">*</span></label>
+                            <input type="text" id="tenant_id" name="tenant_id" required pattern="[0-9]{9}" maxlength="9" inputmode="numeric" placeholder="9 ספרות, ללא מקפים">
+                        </div>
+                        <div class="form-field form-field-wide">
+                            <label for="tenant_street">כתובת קודמת – רחוב ומספר <span class="req">*</span></label>
+                            <input type="text" id="tenant_street" name="tenant_street" required placeholder="לדוגמה: הרצל 12">
+                        </div>
+                        <div class="form-field">
+                            <label for="tenant_city">עיר <span class="req">*</span></label>
+                            <input type="text" id="tenant_city" name="tenant_city" required placeholder="לדוגמה: תל אביב">
+                        </div>
+                        <div class="form-field">
+                            <label for="tenant_phone">טלפון נייד <span class="req">*</span></label>
+                            <input type="tel" id="tenant_phone" name="tenant_phone" required pattern="0[2-9][0-9]{7,8}" placeholder="לדוגמה: 0541234567">
+                        </div>
+                        <div class="form-field form-field-wide">
+                            <label for="tenant_email">דוא"ל <span class="req">*</span></label>
+                            <input type="email" id="tenant_email" name="tenant_email" required placeholder="name@example.com">
+                        </div>
+                        <div class="form-field form-field-full">
+                            <label for="additional_tenants">שוכרים נוספים (אופציונלי)</label>
+                            <textarea id="additional_tenants" name="additional_tenants" rows="2" placeholder="אם יש שוכרים נוספים — שם מלא + ת.ז. של כל אחד, שורה לכל שוכר"></textarea>
+                            <small class="form-help">השוכרים הנוספים יופיעו בחוזה כמשתתפים ויחתמו עליו.</small>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== Step 3: Property ===== -->
+                <section class="form-step" data-step="3">
+                    <div class="form-step-header">
+                        <span class="form-step-num">שלב 3 מתוך 6</span>
+                        <h2>פרטי הנכס</h2>
+                        <p class="form-step-lede">תיאור מדויק של הדירה שמושכרת. פרטי הגוש/חלקה מופיעים בנסח הטאבו.</p>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-field form-field-wide">
+                            <label for="property_street">כתובת הנכס – רחוב ומספר <span class="req">*</span></label>
+                            <input type="text" id="property_street" name="property_street" required placeholder="לדוגמה: רש״י 64">
+                        </div>
+                        <div class="form-field">
+                            <label for="property_city">עיר <span class="req">*</span></label>
+                            <input type="text" id="property_city" name="property_city" required placeholder="לדוגמה: ירושלים">
+                        </div>
+                        <div class="form-field">
+                            <label for="property_neighborhood">שכונה</label>
+                            <input type="text" id="property_neighborhood" name="property_neighborhood" placeholder="לדוגמה: רחביה">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="property_bedrooms">חדרי שינה <span class="req">*</span></label>
+                            <input type="number" id="property_bedrooms" name="property_bedrooms" required min="0" max="10" value="3" inputmode="numeric">
+                        </div>
+                        <div class="form-field">
+                            <label for="property_bathrooms">שירותים <span class="req">*</span></label>
+                            <input type="number" id="property_bathrooms" name="property_bathrooms" required min="0" max="6" value="1" inputmode="numeric">
+                        </div>
+                        <div class="form-field">
+                            <label for="property_showers">מקלחות <span class="req">*</span></label>
+                            <input type="number" id="property_showers" name="property_showers" required min="0" max="6" value="1" inputmode="numeric">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="property_block">גוש <span class="req">*</span></label>
+                            <input type="text" id="property_block" name="property_block" required inputmode="numeric" placeholder="לדוגמה: 30021">
+                        </div>
+                        <div class="form-field">
+                            <label for="property_parcel">חלקה <span class="req">*</span></label>
+                            <input type="text" id="property_parcel" name="property_parcel" required inputmode="numeric" placeholder="לדוגמה: 47">
+                        </div>
+                        <div class="form-field">
+                            <label for="property_subparcel">תת-חלקה</label>
+                            <input type="text" id="property_subparcel" name="property_subparcel" inputmode="numeric" placeholder="אם יש – לדוגמה: 12">
+                        </div>
+
+                        <div class="form-field form-field-full">
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" id="has_furniture" name="has_furniture">
+                                <span>הדירה כוללת ריהוט/חפצים שנשארים בנכס</span>
+                            </label>
+                        </div>
+                        <div class="form-field form-field-full" id="furniture_field" style="display:none;">
+                            <label for="furniture_list">רשימת חפצים שנשארים בדירה</label>
+                            <textarea id="furniture_list" name="furniture_list" rows="3" placeholder="שורה לכל פריט – לדוגמה: מקרר Samsung, ספה דו-מושבית, מזגן בסלון..."></textarea>
+                            <small class="form-help">תופיע כנספח א׳ להסכם. ניתן להוסיף ולערוך גם בקובץ המוכן.</small>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== Step 4: Terms ===== -->
+                <section class="form-step" data-step="4">
+                    <div class="form-step-header">
+                        <span class="form-step-num">שלב 4 מתוך 6</span>
+                        <h2>תנאי השכירות</h2>
+                        <p class="form-step-lede">תקופת השכירות, דמי השכירות החודשיים ומועד התשלום.</p>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="lease_start">תאריך תחילת השכירות <span class="req">*</span></label>
+                            <input type="date" id="lease_start" name="lease_start" required>
+                            <small class="form-help">היום בו השוכר נכנס לדירה.</small>
+                        </div>
+                        <div class="form-field">
+                            <label for="lease_months">תקופת השכירות (חודשים) <span class="req">*</span></label>
+                            <input type="number" id="lease_months" name="lease_months" required min="1" max="120" value="12" inputmode="numeric">
+                            <small class="form-help">תאריך הסיום יחושב אוטומטית.</small>
+                        </div>
+
+                        <div class="form-field form-field-full">
+                            <div class="form-derived" id="leaseEndDisplay">
+                                <span class="form-derived-label">תאריך סיום:</span>
+                                <span class="form-derived-value" id="leaseEndValue">—</span>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="monthly_rent">דמי שכירות חודשיים (₪) <span class="req">*</span></label>
+                            <input type="number" id="monthly_rent" name="monthly_rent" required min="100" max="100000" step="50" value="6500" inputmode="numeric">
+                        </div>
+                        <div class="form-field">
+                            <label for="payment_day">יום בחודש לתשלום <span class="req">*</span></label>
+                            <input type="number" id="payment_day" name="payment_day" required min="1" max="28" value="1" inputmode="numeric">
+                            <small class="form-help">בין 1 ל-28 (להימנע מבעיות בפברואר).</small>
+                        </div>
+
+                        <div class="form-field form-field-full">
+                            <label>אופן התשלום <span class="req">*</span></label>
+                            <div class="form-radio-group">
+                                <label class="form-radio-label">
+                                    <input type="radio" name="payment_method" value="checks" checked>
+                                    <span>המחאות (צ׳קים) דחויות לכל תקופת השכירות</span>
+                                </label>
+                                <label class="form-radio-label">
+                                    <input type="radio" name="payment_method" value="bank_transfer">
+                                    <span>הוראת קבע / העברה בנקאית חודשית</span>
+                                </label>
+                                <label class="form-radio-label">
+                                    <input type="radio" name="payment_method" value="cash">
+                                    <span>מזומן / אחר (יוגדר בנספח)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== Step 5: Securities ===== -->
+                <section class="form-step" data-step="5">
+                    <div class="form-step-header">
+                        <span class="form-step-num">שלב 5 מתוך 6</span>
+                        <h2>ערבויות וביטחונות</h2>
+                        <p class="form-step-lede">המשכיר מבקש מהשוכר ערבונות שיגנו על הסכם השכירות. ההמלצה הסטנדרטית מופיעה כברירת מחדל.</p>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-field form-field-full">
+                            <div class="form-derived" id="depositDisplay">
+                                <span class="form-derived-label">ערבון בנקאי / העברה (3 חודשי שכירות):</span>
+                                <span class="form-derived-value" id="depositValue">—</span>
+                            </div>
+                            <small class="form-help">סכום זה מחושב אוטומטית כפי 3 על דמי השכירות החודשיים. ניתן לשנות בהמשך אם תרצו.</small>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="promissory_note">סכום שטר חוב (₪) <span class="req">*</span></label>
+                            <input type="number" id="promissory_note" name="promissory_note" required min="0" step="1000" value="50000" inputmode="numeric">
+                            <small class="form-help">שטר חוב לפירעון מיידי במקרה של הפרה.</small>
+                        </div>
+                        <div class="form-field">
+                            <label for="late_penalty">פיצוי איחור פינוי יומי (₪) <span class="req">*</span></label>
+                            <input type="number" id="late_penalty" name="late_penalty" required min="0" step="50" value="500" inputmode="numeric">
+                            <small class="form-help">סכום שישולם על כל יום של איחור בהשבת המפתח.</small>
+                        </div>
+
+                        <div class="form-field form-field-full">
+                            <label>ערבים אישיים (אופציונלי)</label>
+                            <div class="form-radio-group">
+                                <label class="form-radio-label">
+                                    <input type="radio" name="has_guarantors" value="no" checked>
+                                    <span>ללא ערבים אישיים</span>
+                                </label>
+                                <label class="form-radio-label">
+                                    <input type="radio" name="has_guarantors" value="yes">
+                                    <span>נדרשים ערבים אישיים — אוסיף פרטים בהערות</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-field form-field-full" id="guarantors_field" style="display:none;">
+                            <label for="guarantors_details">פרטי הערבים</label>
+                            <textarea id="guarantors_details" name="guarantors_details" rows="3" placeholder="שם מלא + ת.ז. + טלפון של כל ערב, שורה לכל ערב"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== Step 6: Review ===== -->
+                <section class="form-step" data-step="6">
+                    <div class="form-step-header">
+                        <span class="form-step-num">שלב 6 מתוך 6</span>
+                        <h2>סקירה ואישור</h2>
+                        <p class="form-step-lede">בדקו את הפרטים. אם יש משהו לתקן — חזרו אחורה. בלחיצה על "המשך לתשלום" תועברו לדף סליקה מאובטח של SUMIT, ולאחר תשלום מוצלח החוזה יישלח אליכם במייל.</p>
+                    </div>
+
+                    <div id="reviewContent" class="form-review"></div>
+
+                    <div class="form-field form-field-full">
+                        <label class="form-checkbox-label form-terms">
+                            <input type="checkbox" id="terms_agree" name="terms_agree" required>
+                            <span>קראתי ואישרתי את <a href="#" target="_blank">תקנון השימוש</a> ו<a href="#" target="_blank">מדיניות הפרטיות</a>. אני מבין/ה שהמסמך הוא תבנית כללית ולא ייעוץ משפטי אישי, ולמקרים מורכבים מומלץ להתייעץ עם עו״ד.</span>
+                        </label>
+                    </div>
+
+                    <div class="form-pricing">
+                        <div class="form-pricing-line">
+                            <span>הסכם שכירות דירת מגורים</span>
+                            <span>500 ₪</span>
+                        </div>
+                        <div class="form-pricing-line form-pricing-vat">
+                            <span>כולל מע״מ</span>
+                            <span></span>
+                        </div>
+                        <div class="form-pricing-line form-pricing-total">
+                            <span>סה״כ לתשלום</span>
+                            <span>500 ₪</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== Navigation ===== -->
+                <div class="form-nav">
+                    <button type="button" class="form-btn form-btn-secondary" id="prevBtn" disabled>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                        חזרה
+                    </button>
+                    <button type="button" class="form-btn form-btn-primary" id="nextBtn">
+                        הבא
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                    <button type="submit" class="form-btn form-btn-primary form-btn-submit" id="submitBtn" style="display:none;">
+                        המשך לתשלום
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="form-footer">
+        <div class="container">
+            <p>נתקלתם בבעיה? <a href="../../#contact">צרו קשר</a> — אנו כאן לעזור.</p>
+            <p class="form-footer-meta">&copy; 2025 ישראל עשור, משרד עורכי דין · ח.פ. 515843571</p>
+        </div>
+    </footer>
+
+    <script src="form.js"></script>
+</body>
+</html>

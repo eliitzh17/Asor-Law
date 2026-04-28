@@ -1,0 +1,8 @@
+# Firm-internal contract templates (kept locally, not in public repo)
+templates/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
