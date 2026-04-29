@@ -4,6 +4,7 @@ const pageLoadTime = Date.now();
 // Header scroll effect
 const header = document.getElementById('header');
 const backToTop = document.getElementById('backToTop');
+const scrollProgressBar = document.getElementById('scrollProgressBar');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -16,6 +17,13 @@ window.addEventListener('scroll', () => {
         backToTop.classList.add('visible');
     } else {
         backToTop.classList.remove('visible');
+    }
+
+    // Scroll progress bar
+    if (scrollProgressBar) {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+        scrollProgressBar.style.width = pct + '%';
     }
 
     // Active nav link
@@ -36,6 +44,88 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Projects slider — clone cards for seamless loop + manual nudge controls
+(function() {
+    const slider = document.getElementById('projectsSlider');
+    const track = document.getElementById('projectsTrack');
+    if (!slider || !track) return;
+
+    // Clone all originals once for seamless 50% translateX loop
+    const originals = Array.from(track.children);
+    originals.forEach(card => {
+        const clone = card.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        clone.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+        track.appendChild(clone);
+    });
+
+    // Manual nudge: temporarily pause animation and translate
+    let manualOffset = 0;
+    const cardWidth = () => {
+        const c = track.querySelector('.project-card');
+        return c ? c.getBoundingClientRect().width + 22 : 360;
+    };
+
+    slider.querySelectorAll('.projects-slider-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const dir = btn.dataset.dir;
+            const isRtl = document.documentElement.dir === 'rtl';
+            // In RTL, "next" feels like moving content right; in LTR, left.
+            const sign = (dir === 'next' ? -1 : 1) * (isRtl ? -1 : 1);
+            manualOffset += sign * cardWidth();
+            track.style.animationPlayState = 'paused';
+            track.style.transition = 'transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1)';
+            track.style.transform = `translateX(${manualOffset}px)`;
+            clearTimeout(track._resumeTimer);
+            track._resumeTimer = setTimeout(() => {
+                track.style.transition = '';
+                track.style.transform = '';
+                manualOffset = 0;
+                track.style.animationPlayState = '';
+            }, 4000);
+        });
+    });
+})();
+
+// About section photo slideshow
+(function() {
+    const slides = document.querySelectorAll('.about-slide');
+    const dots = document.querySelectorAll('.about-dot');
+    if (slides.length < 2) return;
+
+    let current = 0;
+    let timer = null;
+
+    function show(index) {
+        slides.forEach((s, i) => s.classList.toggle('active', i === index));
+        dots.forEach((d, i) => d.classList.toggle('active', i === index));
+        current = index;
+    }
+
+    function next() {
+        show((current + 1) % slides.length);
+    }
+
+    function start() {
+        stop();
+        timer = setInterval(next, 5500);
+    }
+
+    function stop() {
+        if (timer) clearInterval(timer);
+        timer = null;
+    }
+
+    dots.forEach((d, i) => {
+        d.addEventListener('click', () => {
+            show(i);
+            start();
+        });
+    });
+
+    start();
+})();
 
 // Back to top
 backToTop.addEventListener('click', () => {

@@ -105,7 +105,7 @@
 ### 6. Contact Section
 - Contact form (name, phone, email, message, submit)
 - Map embed (נחום חפצדי 17, ירושלים)
-- Contact details: phone, email, fax, address
+- Contact details: phone, email, address
 - Office hours (TBD)
 
 ### 7. Footer
