@@ -41,9 +41,17 @@
     <!-- ===== Hero ===== -->
     <section class="dig-hero">
         <div class="container">
-            <span class="dig-hero-eyebrow">האזור הדיגיטלי</span>
-            <h1>מסמכים משפטיים<br><span class="accent">תוך דקות.</span></h1>
-            <p class="lede">שאלון קצר, תשלום מאובטח, וקובץ ערוך מקצועית במייל. ללא תורים, ללא פגישות. בליווי הבעלות המקצועית של משרד עשור ושות׳ — ירושלים.</p>
+            <span class="dig-hero-eyebrow">האזור הדיגיטלי של עשור ושות׳</span>
+            <h1>שירותים משפטיים<br><span class="accent">בלחיצה.</span></h1>
+            <p class="lede">מסמכים משפטיים מקצועיים — מותאמים אישית, נשלחים למייל תוך דקות. מחיר קבוע, ללא הפתעות, ללא תורים, ללא פגישות. בכתיבת ובאחריות עורכי הדין של משרד עשור ושות׳.</p>
+
+            <div class="dig-hero-cta">
+                <a href="#products" class="dig-hero-btn primary">
+                    צפו במוצרים
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a href="#how" class="dig-hero-btn ghost">איך זה עובד</a>
+            </div>
 
             <div class="dig-hero-trust">
                 <span>
@@ -58,6 +66,37 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     מסירה תוך דקות
                 </span>
+                <span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    מחיר קבוע מראש
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Comparison strip ===== -->
+    <section class="dig-compare">
+        <div class="container">
+            <div class="dig-compare-card">
+                <div class="dig-compare-col traditional">
+                    <span class="dig-compare-tag">משרד עו״ד מסורתי</span>
+                    <ul>
+                        <li><span class="x">✕</span> תיאום פגישה ימים מראש</li>
+                        <li><span class="x">✕</span> חיוב לפי שעה — ללא שקיפות</li>
+                        <li><span class="x">✕</span> טופס נייר ידני</li>
+                        <li><span class="x">✕</span> זמן המתנה לטיוטה</li>
+                    </ul>
+                </div>
+                <div class="dig-compare-vs" aria-hidden="true">vs</div>
+                <div class="dig-compare-col digital">
+                    <span class="dig-compare-tag">האזור הדיגיטלי</span>
+                    <ul>
+                        <li><span class="v">✓</span> פתוח 24/7 — מתי שנוח לכם</li>
+                        <li><span class="v">✓</span> מחיר קבוע, ידוע מראש</li>
+                        <li><span class="v">✓</span> שאלון מקוון של 5 דקות</li>
+                        <li><span class="v">✓</span> המסמך במייל תוך דקות</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -107,10 +146,19 @@
             <div class="gold-line"></div>
             <p class="section-subtitle">קטלוג המוצרים הולך וגדל. כל מוצר נכתב ונבדק על ידי עורכי הדין של המשרד.</p>
 
+            <div class="dig-cat-pills" role="tablist" aria-label="סינון לפי קטגוריה">
+                <button class="dig-cat-pill active" data-cat="all" role="tab" aria-selected="true">הכל</button>
+                <button class="dig-cat-pill" data-cat="real-estate" role="tab" aria-selected="false">מקרקעין</button>
+                <button class="dig-cat-pill" data-cat="contracts" role="tab" aria-selected="false">חוזים</button>
+                <button class="dig-cat-pill" data-cat="estate" role="tab" aria-selected="false">ירושות וצוואות</button>
+                <button class="dig-cat-pill" data-cat="poa" role="tab" aria-selected="false">ייפוי כוח</button>
+            </div>
+
             <div class="dig-products-grid">
 
                 <!-- Active product: Rental Agreement -->
-                <div class="dig-product-card">
+                <div class="dig-product-card" data-cat="real-estate">
+                    <span class="dig-product-badge">⭐ פופולרי</span>
                     <div class="dig-product-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     </div>
@@ -124,7 +172,7 @@
                 </div>
 
                 <!-- Coming soon -->
-                <div class="dig-product-card coming-soon">
+                <div class="dig-product-card coming-soon" data-cat="real-estate">
                     <div class="dig-product-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
                     </div>
@@ -136,7 +184,7 @@
                     </div>
                 </div>
 
-                <div class="dig-product-card coming-soon">
+                <div class="dig-product-card coming-soon" data-cat="contracts">
                     <div class="dig-product-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                     </div>
@@ -148,7 +196,7 @@
                     </div>
                 </div>
 
-                <div class="dig-product-card coming-soon">
+                <div class="dig-product-card coming-soon" data-cat="estate">
                     <div class="dig-product-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
                     </div>
@@ -160,7 +208,7 @@
                     </div>
                 </div>
 
-                <div class="dig-product-card coming-soon">
+                <div class="dig-product-card coming-soon" data-cat="poa">
                     <div class="dig-product-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.5 0 4.76 1.02 6.4 2.66"/></svg>
                     </div>
@@ -172,7 +220,7 @@
                     </div>
                 </div>
 
-                <div class="dig-product-card coming-soon">
+                <div class="dig-product-card coming-soon" data-cat="estate">
                     <div class="dig-product-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
                     </div>
@@ -289,5 +337,24 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script>
+    (function(){
+      const pills = document.querySelectorAll('.dig-cat-pill');
+      const cards = document.querySelectorAll('.dig-product-card');
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          const cat = pill.dataset.cat;
+          pills.forEach(p => {
+            p.classList.toggle('active', p === pill);
+            p.setAttribute('aria-selected', p === pill ? 'true' : 'false');
+          });
+          cards.forEach(card => {
+            const matches = cat === 'all' || card.dataset.cat === cat;
+            card.classList.toggle('is-hidden', !matches);
+          });
+        });
+      });
+    })();
+    </script>
 </body>
 </html>

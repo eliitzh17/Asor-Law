@@ -1376,6 +1376,115 @@ section {
     gap: 24px;
 }
 
+/* Projects running slider (marquee) */
+.projects-slider {
+    position: relative;
+    overflow: hidden;
+    margin-inline: calc(50% - 50vw);
+    padding-inline: max(24px, calc(50vw - 600px));
+    padding-block: 8px 24px;
+}
+
+.projects-slider::before,
+.projects-slider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.projects-slider::before {
+    inset-inline-start: 0;
+    background: linear-gradient(to right, var(--off-white) 0%, transparent 100%);
+}
+
+[dir="rtl"] .projects-slider::before {
+    background: linear-gradient(to left, var(--off-white) 0%, transparent 100%);
+}
+
+.projects-slider::after {
+    inset-inline-end: 0;
+    background: linear-gradient(to left, var(--off-white) 0%, transparent 100%);
+}
+
+[dir="rtl"] .projects-slider::after {
+    background: linear-gradient(to right, var(--off-white) 0%, transparent 100%);
+}
+
+.projects-track {
+    display: flex;
+    gap: 22px;
+    width: max-content;
+    animation: projects-scroll 60s linear infinite;
+    will-change: transform;
+}
+
+[dir="rtl"] .projects-track {
+    animation-name: projects-scroll-rtl;
+}
+
+.projects-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes projects-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes projects-scroll-rtl {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(50%); }
+}
+
+.projects-track .project-card {
+    width: 340px;
+    flex: 0 0 340px;
+}
+
+.projects-slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.projects-slider-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(184, 148, 63, 0.4);
+    background: var(--white);
+    color: var(--navy);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-xs);
+}
+
+.projects-slider-btn:hover {
+    background: var(--gold);
+    color: var(--white);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.projects-slider-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 600px) {
+    .projects-track .project-card { width: 280px; flex: 0 0 280px; }
+    .projects-track { animation-duration: 45s; }
+}
+
 .project-card {
     background: var(--white);
     border-radius: 16px;
