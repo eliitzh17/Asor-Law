@@ -26,8 +26,8 @@
     <meta name="twitter:description" content="משרד עורכי דין ישראל עשור ושות׳ בירושלים. מומחים בפינוי בינוי, תמ״א 38, מיסוי מקרקעין ומס הכנסה. ליווי 9 פרויקטים עם 3,100+ דירות חדשות.">
     <meta name="twitter:image" content="https://www.asor-law.com/images/icon.jpeg">
 
-    <link rel="icon" href="../images/icon.jpeg" type="image/jpeg">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/logo-mark.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css?v=2026042902">
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -40,7 +40,6 @@
         "logo": "https://www.asor-law.com/images/icon.jpeg",
         "telephone": "+972-2-500-0275",
         "email": "office@asor-law.com",
-        "faxNumber": "+972-77-444-8996",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "17 Nachum Haftzadi St., Ram Tower - Floor 11, Jerusalem",
@@ -81,11 +80,14 @@
 </head>
 <body>
 
+    <!-- ===== Scroll Progress ===== -->
+    <div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+
     <!-- ===== Header ===== -->
     <header class="header" id="header">
         <div class="container header-inner">
             <a href="#hero" class="logo">
-                <img src="../images/icon.jpeg" alt="עשור ושות׳ - עורכי דין">
+                <img src="../images/logo-he.png" alt="עשור ושות׳ - עורכי דין">
             </a>
 
             <nav>
@@ -93,8 +95,10 @@
                     <li><a href="#about">אודות</a></li>
                     <li><a href="#specialties">תחומי התמחות</a></li>
                     <li><a href="#projects">פרויקטים</a></li>
+                    <li><a href="#approach">הגישה שלנו</a></li>
                     <li><a href="#commitments">המחויבות שלנו</a></li>
                     <li><a href="#contact">צור קשר</a></li>
+                    <li><a href="../digital/" class="nav-online-service">שירות משפטי אונליין</a></li>
                 </ul>
             </nav>
 
@@ -171,6 +175,8 @@
         </div>
 
         <div class="hero-content">
+            <img class="hero-logo-mark" src="../images/logo-mark.png" alt="עשור ושות׳ - עורכי דין">
+            <span class="hero-eyebrow">משרד עורכי דין · ירושלים</span>
             <h1>עשור ושות׳ <span>– עורכי דין</span></h1>
             <p class="hero-tagline">מומחים בהתחדשות עירונית ומיסוי מקרקעין</p>
             <div class="hero-gold-line"></div>
@@ -204,33 +210,54 @@
 
     <!-- ===== About ===== -->
     <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title fade-in">אודות המשרד</h2>
+        <div class="about-slides" aria-hidden="true">
+            <div class="about-slide active" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Jerusalem_Pisgat_Zeev_Mall_and_Light_Rail.jpg/1600px-Jerusalem_Pisgat_Zeev_Mall_and_Light_Rail.jpg');"></div>
+            <div class="about-slide" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Sunrise_in_Neve_Ya%27akov_Jerusalem-1_%287138361135%29.jpg/1600px-Sunrise_in_Neve_Ya%27akov_Jerusalem-1_%287138361135%29.jpg');"></div>
+            <div class="about-slide" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Kiryat_Menachem_and_Kiryat_Yovel.jpg/1600px-Kiryat_Menachem_and_Kiryat_Yovel.jpg');"></div>
+            <div class="about-slide" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5c/Ramot_Alon_Jerusalem_2.jpg');"></div>
+            <div class="about-slides-overlay"></div>
+        </div>
+
+        <div class="container about-content-wrap">
+            <span class="section-eyebrow fade-in" style="color: var(--gold-light);">ידע · ניסיון · ייצוג נחוש</span>
+            <h2 class="section-title fade-in" style="color: #fff;">אודות המשרד</h2>
             <div class="gold-line fade-in"></div>
 
-            <div class="about-grid">
-                <div class="about-text fade-in">
-                    <h3>ישראל עשור, עו״ד (רו״ח)</h3>
-                    <p>משרד עורכי הדין ישראל עשור ושות׳ ממוקם במגדל רם בירושלים וכולל שמונה עורכי דין בעלי מומחיות עמוקה בליווי עסקאות נדל״ן, התחדשות עירונית ומיסוי מקרקעין.</p>
-                    <p>המשרד מתמחה בייצוג דיירים בפרויקטים של פינוי ובינוי ותמ״א 38 הריסה ובנייה, עם ניסיון עשיר בליווי עשרות פרויקטים בירושלים וסביבותיה — משלבי התכנון המוקדם ועד להסכמים הסופיים וקבלת היתר הבנייה.</p>
+            <div class="about-glass-card fade-in">
+                <div class="about-leadership">
+                    <figure class="about-portrait">
+                        <img src="../images/attorney-asor.png" alt="ישראל עשור, עו״ד (רו״ח)">
+                        <span class="about-portrait-frame" aria-hidden="true"></span>
+                    </figure>
 
-                    <ul class="about-roles">
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            יו״ר ועדת התחדשות עירונית בלשכת עו״ד בירושלים
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            מ״מ וועדת מיסוי מקרקעין בלשכת עו״ד ירושלים
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            חבר וועדת הקשר עם רשות התאגידים – לשכת רו״ח
-                        </li>
-                    </ul>
+                    <div class="about-bio">
+                        <span class="about-label">שותף מנהל</span>
+                        <h2>ישראל עשור, עו״ד (רו״ח)</h2>
+                        <div class="about-gold-rule"></div>
+                        <p>משרד עורכי הדין ישראל עשור ושות׳ ממוקם במגדל רם בירושלים וכולל שמונה עורכי דין בעלי מומחיות עמוקה בליווי עסקאות נדל״ן, התחדשות עירונית ומיסוי מקרקעין.</p>
+                        <p>המשרד מתמחה בייצוג דיירים בפרויקטים של פינוי ובינוי ותמ״א 38 הריסה ובנייה, עם ניסיון עשיר בליווי עשרות פרויקטים בירושלים וסביבותיה — משלבי התכנון המוקדם ועד להסכמים הסופיים וקבלת היתר הבנייה.</p>
+
+                        <ul class="about-roles">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                יו״ר ועדת התחדשות עירונית בלשכת עו״ד בירושלים
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                מ״מ וועדת מיסוי מקרקעין בלשכת עו״ד ירושלים
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                מ״מ בוועדת מיסים כללי
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="practice-cards fade-in" id="specialties">
+                <div class="about-practice-divider" aria-hidden="true"></div>
+                <h3 class="about-practice-heading" id="specialties">תחומי התמחות</h3>
+
+                <div class="practice-cards practice-cards--row">
                     <div class="practice-card">
                         <div class="practice-card-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
@@ -256,23 +283,65 @@
                         <h4>התחדשות עירונית</h4>
                     </div>
                 </div>
+
+                <div class="about-practice-divider" aria-hidden="true"></div>
+                <h3 class="about-practice-heading">צוות המשרד</h3>
+
+                <div class="team-grid">
+                    <figure class="team-card">
+                        <div class="team-card-photo">
+                            <img src="../images/attorney-albaz.jpg" alt="עו״ד יערית אלבז">
+                        </div>
+                        <figcaption class="team-card-info">
+                            <span class="team-card-name">עו״ד יערית אלבז</span>
+                            <span class="team-card-title">התחדשות עירונית ומקרקעין</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="team-card">
+                        <div class="team-card-photo">
+                            <img src="../images/attorney-malka.jpg" alt="עו״ד אוראל מלכה">
+                        </div>
+                        <figcaption class="team-card-info">
+                            <span class="team-card-name">עו״ד אוראל מלכה</span>
+                            <span class="team-card-title">התחדשות עירונית ומקרקעין</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="team-card">
+                        <div class="team-card-photo">
+                            <img src="../images/intern-shir.jpg" alt="אלחנן שיר">
+                        </div>
+                        <figcaption class="team-card-info">
+                            <span class="team-card-name">אלחנן שיר</span>
+                            <span class="team-card-title">מתמחה</span>
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
+        </div>
+
+        <div class="about-dots" id="aboutDots">
+            <button class="about-dot active" data-slide="0" aria-label="1"></button>
+            <button class="about-dot" data-slide="1" aria-label="2"></button>
+            <button class="about-dot" data-slide="2" aria-label="3"></button>
+            <button class="about-dot" data-slide="3" aria-label="4"></button>
         </div>
     </section>
 
     <!-- ===== Projects ===== -->
     <section class="projects" id="projects">
         <div class="container">
+            <span class="section-eyebrow fade-in">פורטפוליו</span>
             <h2 class="section-title fade-in">פרויקטים בטיפול</h2>
             <div class="gold-line fade-in"></div>
             <p class="section-subtitle fade-in">המשרד מלווה פרויקטים מובילים של התחדשות עירונית בירושלים ובית שמש</p>
 
-            <div class="projects-grid">
+            <div class="projects-slider" id="projectsSlider">
+              <div class="projects-track" id="projectsTrack">
 
                 <!-- Project 1 -->
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Clalit_Medical_Center%2C_Mekor_Baruch.jpg" alt="רש״י 62-64, מקור ברוך" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Ctext fill=%22%23C5A55A%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22%3E1%3C/text%3E%3C/svg%3E'">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Clalit_Medical_Center%2C_Mekor_Baruch.jpg" alt="רש״י 62-64, מקור ברוך" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Cg fill=%22none%22 stroke=%22%23B8943F%22 stroke-width=%222%22 opacity=%220.65%22%3E%3Crect x=%22160%22 y=%2270%22 width=%2235%22 height=%22110%22/%3E%3Crect x=%22200%22 y=%2250%22 width=%2235%22 height=%22130%22/%3E%3Crect x=%22240%22 y=%2285%22 width=%2235%22 height=%2295%22/%3E%3C/g%3E%3C/svg%3E'">
                         <span class="project-type-badge">תמ״א 38(2)</span>
                     </div>
                     <div class="project-info">
@@ -299,7 +368,7 @@
                 <!-- Project 2 -->
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Sunrise_in_Neve_Ya%27akov_Jerusalem-1_%287138361135%29.jpg/800px-Sunrise_in_Neve_Ya%27akov_Jerusalem-1_%287138361135%29.jpg" alt="משה סנה, נווה יעקב" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Ctext fill=%22%23C5A55A%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22%3E2%3C/text%3E%3C/svg%3E'">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Sunrise_in_Neve_Ya%27akov_Jerusalem-1_%287138361135%29.jpg/800px-Sunrise_in_Neve_Ya%27akov_Jerusalem-1_%287138361135%29.jpg" alt="משה סנה, נווה יעקב" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Cg fill=%22none%22 stroke=%22%23B8943F%22 stroke-width=%222%22 opacity=%220.65%22%3E%3Crect x=%22160%22 y=%2270%22 width=%2235%22 height=%22110%22/%3E%3Crect x=%22200%22 y=%2250%22 width=%2235%22 height=%22130%22/%3E%3Crect x=%22240%22 y=%2285%22 width=%2235%22 height=%2295%22/%3E%3C/g%3E%3C/svg%3E'">
                         <span class="project-type-badge">פינוי ובינוי</span>
                     </div>
                     <div class="project-info">
@@ -326,7 +395,7 @@
                 <!-- Project 3 -->
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Jerusalem_Pisgat_Zeev_Mall_and_Light_Rail.jpg/800px-Jerusalem_Pisgat_Zeev_Mall_and_Light_Rail.jpg" alt="משטרת הישובים, פסגת זאב" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Ctext fill=%22%23C5A55A%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22%3E3%3C/text%3E%3C/svg%3E'">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Jerusalem_Pisgat_Zeev_Mall_and_Light_Rail.jpg/800px-Jerusalem_Pisgat_Zeev_Mall_and_Light_Rail.jpg" alt="משטרת הישובים, פסגת זאב" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Cg fill=%22none%22 stroke=%22%23B8943F%22 stroke-width=%222%22 opacity=%220.65%22%3E%3Crect x=%22160%22 y=%2270%22 width=%2235%22 height=%22110%22/%3E%3Crect x=%22200%22 y=%2250%22 width=%2235%22 height=%22130%22/%3E%3Crect x=%22240%22 y=%2285%22 width=%2235%22 height=%2295%22/%3E%3C/g%3E%3C/svg%3E'">
                         <span class="project-type-badge">פינוי ובינוי</span>
                     </div>
                     <div class="project-info">
@@ -353,7 +422,7 @@
                 <!-- Project 4 -->
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Kiryat_Menachem_and_Kiryat_Yovel.jpg/1280px-Kiryat_Menachem_and_Kiryat_Yovel.jpg" alt="מקסיקו 14, קריית מנחם" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Ctext fill=%22%23C5A55A%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22%3E4%3C/text%3E%3C/svg%3E'">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Kiryat_Menachem_and_Kiryat_Yovel.jpg/1280px-Kiryat_Menachem_and_Kiryat_Yovel.jpg" alt="מקסיקו 14, קריית מנחם" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Cg fill=%22none%22 stroke=%22%23B8943F%22 stroke-width=%222%22 opacity=%220.65%22%3E%3Crect x=%22160%22 y=%2270%22 width=%2235%22 height=%22110%22/%3E%3Crect x=%22200%22 y=%2250%22 width=%2235%22 height=%22130%22/%3E%3Crect x=%22240%22 y=%2285%22 width=%2235%22 height=%2295%22/%3E%3C/g%3E%3C/svg%3E'">
                         <span class="project-type-badge">פינוי ובינוי</span>
                     </div>
                     <div class="project-info">
@@ -380,7 +449,7 @@
                 <!-- Project 5 -->
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/PikiWiki_Israel_9766_old_bet_shemesh.jpg/1280px-PikiWiki_Israel_9766_old_bet_shemesh.jpg" alt="רבי טרפון 4-12" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Ctext fill=%22%23C5A55A%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22%3E5%3C/text%3E%3C/svg%3E'">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/PikiWiki_Israel_9766_old_bet_shemesh.jpg/1280px-PikiWiki_Israel_9766_old_bet_shemesh.jpg" alt="רבי טרפון 4-12" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Cg fill=%22none%22 stroke=%22%23B8943F%22 stroke-width=%222%22 opacity=%220.65%22%3E%3Crect x=%22160%22 y=%2270%22 width=%2235%22 height=%22110%22/%3E%3Crect x=%22200%22 y=%2250%22 width=%2235%22 height=%22130%22/%3E%3Crect x=%22240%22 y=%2285%22 width=%2235%22 height=%2295%22/%3E%3C/g%3E%3C/svg%3E'">
                         <span class="project-type-badge">שינוי תב״ע</span>
                     </div>
                     <div class="project-info">
@@ -407,7 +476,7 @@
                 <!-- Project 6 -->
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Bet_Shemesh.JPG/1280px-Bet_Shemesh.JPG" alt="מעפילי האגוז, חזון איש" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Ctext fill=%22%23C5A55A%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22%3E6%3C/text%3E%3C/svg%3E'">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Bet_Shemesh.JPG/1280px-Bet_Shemesh.JPG" alt="מעפילי האגוז, חזון איש" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Cg fill=%22none%22 stroke=%22%23B8943F%22 stroke-width=%222%22 opacity=%220.65%22%3E%3Crect x=%22160%22 y=%2270%22 width=%2235%22 height=%22110%22/%3E%3Crect x=%22200%22 y=%2250%22 width=%2235%22 height=%22130%22/%3E%3Crect x=%22240%22 y=%2285%22 width=%2235%22 height=%2295%22/%3E%3C/g%3E%3C/svg%3E'">
                         <span class="project-type-badge">פינוי ובינוי</span>
                     </div>
                     <div class="project-info">
@@ -434,7 +503,7 @@
                 <!-- Project 7 -->
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/PisgatZeev90.jpg" alt="חיל האוויר 45-47, פסגת זאב" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Ctext fill=%22%23C5A55A%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22%3E7%3C/text%3E%3C/svg%3E'">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/PisgatZeev90.jpg" alt="חיל האוויר 45-47, פסגת זאב" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Cg fill=%22none%22 stroke=%22%23B8943F%22 stroke-width=%222%22 opacity=%220.65%22%3E%3Crect x=%22160%22 y=%2270%22 width=%2235%22 height=%22110%22/%3E%3Crect x=%22200%22 y=%2250%22 width=%2235%22 height=%22130%22/%3E%3Crect x=%22240%22 y=%2285%22 width=%2235%22 height=%2295%22/%3E%3C/g%3E%3C/svg%3E'">
                         <span class="project-type-badge">פינוי ובינוי</span>
                     </div>
                     <div class="project-info">
@@ -461,7 +530,7 @@
                 <!-- Project 8 -->
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Bukharan_Quarter_P1060111.JPG" alt="ישא ברכה 43-45, הבוכרים" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Ctext fill=%22%23C5A55A%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22%3E8%3C/text%3E%3C/svg%3E'">
+                        <img src="../images/project-bucharim.jpg" alt="ישא ברכה 43-45, הבוכרים" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Cg fill=%22none%22 stroke=%22%23B8943F%22 stroke-width=%222%22 opacity=%220.65%22%3E%3Crect x=%22160%22 y=%2270%22 width=%2235%22 height=%22110%22/%3E%3Crect x=%22200%22 y=%2250%22 width=%2235%22 height=%22130%22/%3E%3Crect x=%22240%22 y=%2285%22 width=%2235%22 height=%2295%22/%3E%3C/g%3E%3C/svg%3E'">
                         <span class="project-type-badge">פינוי ובינוי</span>
                     </div>
                     <div class="project-info">
@@ -488,7 +557,7 @@
                 <!-- Project 9 -->
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Ramot_Alon_Jerusalem_2.jpg" alt="קמזון 1-23, רמות ב׳" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Ctext fill=%22%23C5A55A%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22%3E9%3C/text%3E%3C/svg%3E'">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Ramot_Alon_Jerusalem_2.jpg" alt="קמזון 1-23, רמות ב׳" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22%3E%3Crect fill=%22%231B3A5C%22 width=%22400%22 height=%22200%22/%3E%3Cg fill=%22none%22 stroke=%22%23B8943F%22 stroke-width=%222%22 opacity=%220.65%22%3E%3Crect x=%22160%22 y=%2270%22 width=%2235%22 height=%22110%22/%3E%3Crect x=%22200%22 y=%2250%22 width=%2235%22 height=%22130%22/%3E%3Crect x=%22240%22 y=%2285%22 width=%2235%22 height=%2295%22/%3E%3C/g%3E%3C/svg%3E'">
                         <span class="project-type-badge">פינוי ובינוי</span>
                     </div>
                     <div class="project-info">
@@ -512,6 +581,19 @@
                     </div>
                 </div>
 
+              </div>
+              <div class="projects-slider-controls" aria-hidden="true">
+                <button type="button" class="projects-slider-btn" data-dir="prev" aria-label="הקודם">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button type="button" class="projects-slider-btn" data-dir="next" aria-label="הבא">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </div>
+              <div class="projects-slider-hint" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                <span>החליקו ימינה ושמאלה לעיון בפרויקטים</span>
+              </div>
             </div>
         </div>
     </section>
@@ -519,6 +601,7 @@
     <!-- ===== Commitments ===== -->
     <section class="commitments" id="commitments">
         <div class="container">
+            <span class="section-eyebrow fade-in">ערכים ועקרונות</span>
             <h2 class="section-title fade-in">המחויבות שלנו לדיירים</h2>
             <div class="gold-line fade-in"></div>
             <p class="section-subtitle fade-in">אנו מייצגים את האינטרסים המלאים של הדיירים ובעלי הזכויות, תוך עמידה על כל דרישה</p>
@@ -564,9 +647,55 @@
         </div>
     </section>
 
+    <!-- ===== Approach (Philosophy & Principles) ===== -->
+    <section class="approach" id="approach">
+        <div class="container">
+            <span class="section-eyebrow fade-in">פילוסופיית המשרד</span>
+            <h2 class="section-title fade-in">הגישה המקצועית שלנו</h2>
+            <div class="gold-line fade-in"></div>
+            <p class="section-subtitle fade-in">ארבעה עקרונות שמובילים את הליווי המשפטי בכל פרויקט</p>
+
+            <div class="approach-grid">
+                <div class="approach-card fade-in">
+                    <span class="approach-quote-mark" aria-hidden="true">&ldquo;</span>
+                    <p class="approach-text">אנו מאמינים בייצוג נחוש של בעלי הזכויות, תוך שמירה קפדנית על האינטרסים שלהם בכל שלב משלבי הפרויקט.</p>
+                    <div class="approach-attribution">
+                        <span class="approach-attr-source">ישראל עשור, עו״ד (רו״ח)</span>
+                        <span class="approach-attr-tag">שותף מנהל</span>
+                    </div>
+                </div>
+                <div class="approach-card fade-in">
+                    <span class="approach-quote-mark" aria-hidden="true">&ldquo;</span>
+                    <p class="approach-text">התחדשות עירונית איכותית מתחילה בליווי משפטי שמכיר כל סעיף בהסכם — ויודע איפה הסיכון מסתתר.</p>
+                    <div class="approach-attribution">
+                        <span class="approach-attr-source">צוות המשרד</span>
+                        <span class="approach-attr-tag">ניסיון של עשרות פרויקטים</span>
+                    </div>
+                </div>
+                <div class="approach-card fade-in">
+                    <span class="approach-quote-mark" aria-hidden="true">&ldquo;</span>
+                    <p class="approach-text">כל פרויקט הוא ייחודי. אנו מתאימים את האסטרטגיה המשפטית למבנה הקבוצה ולצרכים הספציפיים של הדיירים.</p>
+                    <div class="approach-attribution">
+                        <span class="approach-attr-source">מתודולוגיה</span>
+                        <span class="approach-attr-tag">ליווי מותאם אישית</span>
+                    </div>
+                </div>
+                <div class="approach-card fade-in">
+                    <span class="approach-quote-mark" aria-hidden="true">&ldquo;</span>
+                    <p class="approach-text">השילוב בין ייצוג משפטי למומחיות במיסוי מקרקעין מאפשר חיסכון משמעותי לדיירים — לעיתים עשרות אלפי שקלים.</p>
+                    <div class="approach-attribution">
+                        <span class="approach-attr-source">יתרון מקצועי</span>
+                        <span class="approach-attr-tag">עו״ד ורו״ח באותו משרד</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== Contact ===== -->
     <section class="contact" id="contact">
         <div class="container">
+            <span class="section-eyebrow fade-in">דברו איתנו</span>
             <h2 class="section-title fade-in">צור קשר</h2>
             <div class="gold-line fade-in"></div>
             <p class="section-subtitle fade-in">נשמח לעמוד לרשותכם בכל שאלה</p>
@@ -653,21 +782,6 @@
                         </div>
                     </div>
 
-                    <div class="contact-item">
-                        <div class="contact-item-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                        </div>
-                        <div class="contact-item-text">
-                            <h4>פקס</h4>
-                            <p>077-4448996</p>
-                        </div>
-                        <div class="contact-item-actions">
-                            <button class="contact-copy-btn" onclick="navigator.clipboard.writeText('077-4448996').then(()=>{this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),1500)})" aria-label="העתק מספר פקס">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                            </button>
-                        </div>
-                    </div>
-
                     <div class="contact-map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.5!2d35.21!3d31.79!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDQ3JzI0LjAiTiAzNcKwMTInMzYuMCJF!5e0!3m2!1siw!2sil!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="מפת המשרד"></iframe>
                     </div>
@@ -681,7 +795,7 @@
         <div class="container">
             <div class="footer-inner">
                 <div class="footer-brand">
-                    <img src="../images/icon.jpeg" alt="עשור ושות׳ - עורכי דין">
+                    <img src="../images/logo-he.png" alt="עשור ושות׳ - עורכי דין">
                     <p>משרד עורכי הדין ישראל עשור ושות׳ — מומחים בהתחדשות עירונית, מיסוי מקרקעין ומס הכנסה. ליווי משפטי מקצועי מהשלב הראשון ועד קבלת המפתח.</p>
                 </div>
                 <div class="footer-links">
@@ -711,8 +825,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>&copy; 2025 עשור ושות׳ - עורכי דין. כל הזכויות שמורות.</span>
-                <a href="privacy.html">מדיניות פרטיות</a> | <a href="#" id="footerA11yLink">הצהרת נגישות</a>
+                <span>&copy; כל הזכויות שמורות לישראל עשור, משרד עורכי דין · 2026</span>
+                <a href="#" id="footerA11yLink">הצהרת נגישות</a>
             </div>
         </div>
     </footer>
@@ -730,7 +844,7 @@
     <!-- ===== Cookie Consent ===== -->
     <div class="cookie-consent" id="cookieConsent">
         <div class="cookie-consent-inner">
-            <p>אנו מכבדים את פרטיותכם. לידיעתכם, אתר זה עושה שימוש בקובצי Cookie ובטכנולוגיות דומות לצורך שיפור חוויית המשתמש, התאמת תוכן אישי, ולביצוע ניתוחים סטטיסטיים, בהתאם ל<a href="privacy.html">מדיניות הפרטיות</a>.</p>
+            <p>אתר זה משתמש בעוגיות (cookies) לצורך שיפור חוויית הגלישה. <a href="#">מדיניות פרטיות</a></p>
             <button class="cookie-consent-btn" id="cookieAccept">הבנתי ואני מסכים/ה</button>
         </div>
     </div>
@@ -814,6 +928,6 @@
     </div>
 
     <!-- ===== JavaScript ===== -->
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js?v=2026042902"></script>
 </body>
 </html>

@@ -1,0 +1,860 @@
+/* ===== Digital Area Styles ===== */
+/* Extends main style.css with digital-platform-specific components */
+
+/* ===== Digital Hero ===== */
+.dig-hero {
+    position: relative;
+    background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 50%, #1e4876 100%);
+    padding: 140px 0 80px;
+    color: var(--white);
+    text-align: center;
+    overflow: hidden;
+}
+
+.dig-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 30% 30%, rgba(184, 148, 63, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 70% 70%, rgba(30, 72, 118, 0.4) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.dig-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.dig-hero-eyebrow {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    padding: 6px 18px;
+    border: 1px solid rgba(184, 148, 63, 0.4);
+    border-radius: 999px;
+    background: rgba(184, 148, 63, 0.08);
+}
+
+.dig-hero h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    font-family: 'Frank Ruhl Libre', serif;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
+}
+
+.dig-hero h1 .accent {
+    color: var(--gold);
+}
+
+.dig-hero .lede {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 720px;
+    margin: 0 auto 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.dig-hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.dig-hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.dig-hero-btn.primary {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: var(--white);
+    box-shadow: 0 6px 20px rgba(184, 148, 63, 0.4);
+    border-color: var(--gold);
+}
+
+.dig-hero-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(184, 148, 63, 0.5);
+}
+
+.dig-hero-btn.primary svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.25s ease;
+}
+
+[dir="rtl"] .dig-hero-btn.primary svg {
+    transform: scaleX(-1);
+}
+
+.dig-hero-btn.primary:hover svg {
+    transform: translateX(-3px);
+}
+
+[dir="rtl"] .dig-hero-btn.primary:hover svg {
+    transform: scaleX(-1) translateX(3px);
+}
+
+.dig-hero-btn.ghost {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.92);
+    border-color: rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.dig-hero-btn.ghost:hover {
+    border-color: var(--gold);
+    color: var(--gold-light);
+    background: rgba(184, 148, 63, 0.1);
+    transform: translateY(-2px);
+}
+
+.dig-hero-trust {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+}
+
+/* ===== Comparison ===== */
+.dig-compare {
+    background: var(--off-white);
+    padding: 64px 0 24px;
+}
+
+.dig-compare-card {
+    max-width: 980px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(184, 148, 63, 0.18);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0;
+    overflow: hidden;
+}
+
+.dig-compare-col {
+    padding: 36px 32px;
+}
+
+.dig-compare-col.digital {
+    background: linear-gradient(180deg, rgba(184, 148, 63, 0.06) 0%, transparent 100%);
+}
+
+.dig-compare-col.traditional {
+    border-inline-end: 1px dashed rgba(184, 148, 63, 0.25);
+}
+
+.dig-compare-tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    padding: 6px 14px;
+    border-radius: 999px;
+}
+
+.dig-compare-col.traditional .dig-compare-tag {
+    color: var(--text-light);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.dig-compare-col.digital .dig-compare-tag {
+    color: var(--gold-dark);
+    background: rgba(184, 148, 63, 0.12);
+}
+
+.dig-compare-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dig-compare-col li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--text-dark);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.dig-compare-col.traditional li {
+    color: var(--text-light);
+    text-decoration: line-through;
+    text-decoration-color: rgba(0, 0, 0, 0.18);
+}
+
+.dig-compare-col .x,
+.dig-compare-col .v {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.dig-compare-col .x {
+    background: rgba(231, 76, 60, 0.12);
+    color: #c0392b;
+}
+
+.dig-compare-col .v {
+    background: var(--gold);
+    color: var(--white);
+}
+
+.dig-compare-vs {
+    align-self: center;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--gold);
+    background: var(--white);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -28px;
+    z-index: 2;
+    box-shadow: 0 4px 16px rgba(184, 148, 63, 0.3);
+}
+
+/* ===== Category pills ===== */
+.dig-cat-pills {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.dig-cat-pill {
+    background: var(--white);
+    border: 1px solid rgba(184, 148, 63, 0.25);
+    color: var(--text-dark);
+    padding: 9px 22px;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dig-cat-pill:hover {
+    border-color: var(--gold);
+    color: var(--gold-dark);
+}
+
+.dig-cat-pill.active {
+    background: var(--navy);
+    color: var(--white);
+    border-color: var(--navy);
+    box-shadow: 0 4px 14px rgba(27, 58, 92, 0.25);
+}
+
+/* ===== Product badge ===== */
+.dig-product-badge {
+    position: absolute;
+    top: 14px;
+    inset-inline-end: 14px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: var(--white);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(184, 148, 63, 0.4);
+    z-index: 2;
+}
+
+.dig-product-card.is-hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .dig-compare-card {
+        grid-template-columns: 1fr;
+    }
+    .dig-compare-col.traditional {
+        border-inline-end: none;
+        border-bottom: 1px dashed rgba(184, 148, 63, 0.25);
+    }
+    .dig-compare-vs {
+        margin: -28px auto;
+    }
+}
+
+.dig-hero-trust > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dig-hero-trust svg {
+    width: 18px;
+    height: 18px;
+    color: var(--gold);
+}
+
+/* ===== How it works ===== */
+.dig-how {
+    background: var(--off-white);
+    padding: 90px 0;
+}
+
+.dig-how-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.dig-how-step {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 36px 28px 32px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(184, 148, 63, 0.12);
+    position: relative;
+    transition: var(--transition);
+}
+
+.dig-how-step:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(184, 148, 63, 0.4);
+}
+
+.dig-how-num {
+    position: absolute;
+    top: -18px;
+    inset-inline-start: 28px;
+    width: 36px;
+    height: 36px;
+    background: var(--gold);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(184, 148, 63, 0.4);
+}
+
+.dig-how-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+}
+
+.dig-how-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.dig-how-step h3 {
+    color: var(--navy);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.dig-how-step p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ===== Product Grid ===== */
+.dig-products {
+    background: var(--white);
+    padding: 90px 0;
+}
+
+.dig-products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.dig-product-card {
+    background: var(--white);
+    border: 1px solid rgba(184, 148, 63, 0.18);
+    border-radius: 14px;
+    padding: 32px 28px;
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.dig-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--gold);
+}
+
+.dig-product-card.coming-soon {
+    opacity: 0.65;
+    border-style: dashed;
+}
+
+.dig-product-card.coming-soon:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(184, 148, 63, 0.18);
+}
+
+.dig-product-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--off-white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    color: var(--gold);
+}
+
+.dig-product-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.dig-product-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 8px;
+}
+
+.dig-product-card h3 {
+    font-size: 1.2rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.dig-product-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.dig-product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid rgba(184, 148, 63, 0.18);
+}
+
+.dig-product-price {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+}
+
+.dig-product-price small {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-weight: 400;
+    margin-inline-start: 4px;
+}
+
+.dig-product-cta {
+    background: var(--gold);
+    color: var(--white);
+    text-decoration: none;
+    padding: 9px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.dig-product-cta:hover {
+    background: var(--gold-dark);
+    transform: translateY(-1px);
+}
+
+.dig-product-soon {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Trust Strip ===== */
+.dig-trust {
+    background: var(--navy-dark);
+    color: rgba(255, 255, 255, 0.92);
+    padding: 60px 0;
+}
+
+.dig-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dig-trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.dig-trust-icon {
+    width: 44px;
+    height: 44px;
+    color: var(--gold);
+}
+
+.dig-trust-item h4 {
+    color: var(--white);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.dig-trust-item p {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ===== Product Page Specific ===== */
+.dig-product-hero {
+    background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 50%, #1e4876 100%);
+    padding: 140px 0 70px;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.dig-product-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 80% 30%, rgba(184, 148, 63, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.dig-product-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.dig-product-hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.dig-breadcrumb {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 18px;
+}
+
+.dig-breadcrumb a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+}
+
+.dig-breadcrumb a:hover {
+    color: var(--gold);
+}
+
+.dig-product-hero h1 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+}
+
+.dig-product-hero .lede {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+}
+
+.dig-product-bullets {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.dig-product-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 8px 0;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1rem;
+}
+
+.dig-product-bullets svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: var(--gold);
+    margin-top: 4px;
+}
+
+.dig-product-card-cta {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 36px 32px;
+    text-align: center;
+    color: var(--navy);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(184, 148, 63, 0.4);
+}
+
+.dig-product-card-cta .price-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.dig-product-card-cta .price {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 3.4rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+    letter-spacing: -1.5px;
+}
+
+.dig-product-card-cta .price .currency {
+    font-size: 1.6rem;
+    color: var(--gold);
+    font-weight: 500;
+    margin-inline-start: 4px;
+    vertical-align: top;
+    margin-top: 8px;
+    display: inline-block;
+}
+
+.dig-product-card-cta .price-vat {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 2px;
+    margin-bottom: 22px;
+}
+
+.dig-product-card-cta .start-btn {
+    display: block;
+    background: var(--gold);
+    color: var(--white);
+    text-decoration: none;
+    padding: 16px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: var(--transition);
+    margin-bottom: 16px;
+    box-shadow: 0 4px 16px rgba(184, 148, 63, 0.4);
+}
+
+.dig-product-card-cta .start-btn:hover {
+    background: var(--gold-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(184, 148, 63, 0.5);
+}
+
+.dig-product-card-cta .meta {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.dig-product-card-cta .meta strong {
+    color: var(--navy);
+}
+
+/* ===== FAQ ===== */
+.dig-faq {
+    background: var(--off-white);
+    padding: 90px 0;
+}
+
+.dig-faq-list {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.dig-faq-item {
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid rgba(184, 148, 63, 0.18);
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.dig-faq-q {
+    padding: 20px 24px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 1.05rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.dig-faq-q::-webkit-details-marker {
+    display: none;
+}
+
+.dig-faq-q::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--gold);
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+.dig-faq-item[open] .dig-faq-q::after {
+    transform: rotate(45deg);
+}
+
+.dig-faq-item[open] .dig-faq-q {
+    border-bottom: 1px solid rgba(184, 148, 63, 0.18);
+}
+
+.dig-faq-a {
+    padding: 18px 24px 22px;
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 0.98rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+    .dig-hero {
+        padding: 120px 0 70px;
+    }
+
+    .dig-hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .dig-hero .lede {
+        font-size: 1.1rem;
+    }
+
+    .dig-how-grid,
+    .dig-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dig-trust-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .dig-product-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .dig-product-hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .dig-hero h1 {
+        font-size: 2rem;
+    }
+
+    .dig-hero-trust {
+        gap: 16px;
+        font-size: 0.85rem;
+    }
+
+    .dig-how-grid,
+    .dig-products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dig-product-hero {
+        padding: 110px 0 50px;
+    }
+
+    .dig-product-card-cta .price {
+        font-size: 2.6rem;
+    }
+}
