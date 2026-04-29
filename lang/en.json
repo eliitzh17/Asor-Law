@@ -60,10 +60,16 @@
         "role1": "Chairman of the Urban Renewal Committee at the Jerusalem Bar Association",
         "role2": "Deputy Chair, Real Estate Taxation Committee at the Jerusalem Bar Association",
         "role3": "Alternate Member of the General Tax Committee",
+        "practice_heading": "Practice Areas",
         "practice_income_tax": "Income Tax",
         "practice_vat": "Value Added Tax",
         "practice_real_estate": "Real Estate Taxation",
-        "practice_urban_renewal": "Urban Renewal"
+        "practice_urban_renewal": "Urban Renewal",
+        "team_heading": "Our Team",
+        "attorney_albaz_name": "Yarit Albaz, Adv.",
+        "attorney_albaz_title": "Urban Renewal & Real Estate",
+        "attorney_malka_name": "Oral Malka, Adv.",
+        "attorney_malka_title": "Urban Renewal & Real Estate"
     },
     "projects": {
         "eyebrow": "Portfolio",
@@ -178,14 +184,12 @@
         "copy_phone": "Copy phone number",
         "copy_email": "Copy email address",
         "copy_address": "Copy address",
-        "copy_fax": "Copy fax number",
         "details_heading": "Contact Details",
         "address_label": "Address",
         "address_line1": "17 Nachum Haftzadi St., Jerusalem",
         "address_line2": "Ram Tower - Floor 11",
         "phone_label": "Phone",
-        "email_label": "Email",
-        "fax_label": "Fax"
+        "email_label": "Email"
     },
     "footer": {
         "brand_description": "Israel Asor & Co. Law Firm — Experts in urban renewal, real estate taxation, and income tax. Professional legal counsel from the first step to receiving the keys.",

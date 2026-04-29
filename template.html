@@ -40,7 +40,6 @@
         "logo": "https://www.asor-law.com/images/icon.jpeg",
         "telephone": "+972-2-500-0275",
         "email": "office@asor-law.com",
-        "faxNumber": "+972-77-444-8996",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "17 Nachum Haftzadi St., Ram Tower - Floor 11, Jerusalem",
@@ -225,7 +224,12 @@
             <div class="gold-line fade-in"></div>
 
             <div class="about-glass-card fade-in">
-                <div class="about-glass-inner">
+                <div class="about-leadership">
+                    <figure class="about-portrait">
+                        <img src="../images/attorney-asor.png" alt="{{about.attorney_title}}">
+                        <span class="about-portrait-frame" aria-hidden="true"></span>
+                    </figure>
+
                     <div class="about-bio">
                         <span class="about-label">{{about.bio_label}}</span>
                         <h2>{{about.attorney_title}}</h2>
@@ -248,33 +252,60 @@
                             </li>
                         </ul>
                     </div>
+                </div>
 
-                    <div class="practice-cards" id="specialties">
-                        <div class="practice-card">
-                            <div class="practice-card-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                            </div>
-                            <h4>{{about.practice_income_tax}}</h4>
+                <div class="about-practice-divider" aria-hidden="true"></div>
+                <h3 class="about-practice-heading" id="specialties">{{about.practice_heading}}</h3>
+
+                <div class="practice-cards practice-cards--row">
+                    <div class="practice-card">
+                        <div class="practice-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                         </div>
-                        <div class="practice-card">
-                            <div class="practice-card-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                            </div>
-                            <h4>{{about.practice_vat}}</h4>
-                        </div>
-                        <div class="practice-card">
-                            <div class="practice-card-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                            </div>
-                            <h4>{{about.practice_real_estate}}</h4>
-                        </div>
-                        <div class="practice-card">
-                            <div class="practice-card-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="6" height="14" rx="1"/><rect x="9" y="3" width="6" height="17" rx="1"/><rect x="17" y="8" width="6" height="12" rx="1"/></svg>
-                            </div>
-                            <h4>{{about.practice_urban_renewal}}</h4>
-                        </div>
+                        <h4>{{about.practice_income_tax}}</h4>
                     </div>
+                    <div class="practice-card">
+                        <div class="practice-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <h4>{{about.practice_vat}}</h4>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <h4>{{about.practice_real_estate}}</h4>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="6" height="14" rx="1"/><rect x="9" y="3" width="6" height="17" rx="1"/><rect x="17" y="8" width="6" height="12" rx="1"/></svg>
+                        </div>
+                        <h4>{{about.practice_urban_renewal}}</h4>
+                    </div>
+                </div>
+
+                <div class="about-practice-divider" aria-hidden="true"></div>
+                <h3 class="about-practice-heading">{{about.team_heading}}</h3>
+
+                <div class="team-grid">
+                    <figure class="team-card">
+                        <div class="team-card-photo">
+                            <img src="../images/attorney-albaz.jpg" alt="{{about.attorney_albaz_name}}">
+                        </div>
+                        <figcaption class="team-card-info">
+                            <span class="team-card-name">{{about.attorney_albaz_name}}</span>
+                            <span class="team-card-title">{{about.attorney_albaz_title}}</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="team-card">
+                        <div class="team-card-photo">
+                            <img src="../images/attorney-malka.jpg" alt="{{about.attorney_malka_name}}">
+                        </div>
+                        <figcaption class="team-card-info">
+                            <span class="team-card-name">{{about.attorney_malka_name}}</span>
+                            <span class="team-card-title">{{about.attorney_malka_title}}</span>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -723,21 +754,6 @@
                         </div>
                         <div class="contact-item-actions">
                             <button class="contact-copy-btn" onclick="navigator.clipboard.writeText('office@asor-law.com').then(()=>{this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),1500)})" aria-label="{{contact.copy_email}}">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-item-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                        </div>
-                        <div class="contact-item-text">
-                            <h4>{{contact.fax_label}}</h4>
-                            <p>077-4448996</p>
-                        </div>
-                        <div class="contact-item-actions">
-                            <button class="contact-copy-btn" onclick="navigator.clipboard.writeText('077-4448996').then(()=>{this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),1500)})" aria-label="{{contact.copy_fax}}">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                             </button>
                         </div>

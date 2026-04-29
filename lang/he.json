@@ -60,10 +60,16 @@
         "role1": "יו״ר ועדת התחדשות עירונית בלשכת עו״ד בירושלים",
         "role2": "מ״מ וועדת מיסוי מקרקעין בלשכת עו״ד ירושלים",
         "role3": "מ״מ בוועדת מיסים כללי",
+        "practice_heading": "תחומי התמחות",
         "practice_income_tax": "מס הכנסה",
         "practice_vat": "מס ערך מוסף",
         "practice_real_estate": "מיסוי מקרקעין",
-        "practice_urban_renewal": "התחדשות עירונית"
+        "practice_urban_renewal": "התחדשות עירונית",
+        "team_heading": "צוות המשרד",
+        "attorney_albaz_name": "עו״ד יערית אלבז",
+        "attorney_albaz_title": "התחדשות עירונית ומקרקעין",
+        "attorney_malka_name": "עו״ד אוראל מלכה",
+        "attorney_malka_title": "התחדשות עירונית ומקרקעין"
     },
     "projects": {
         "eyebrow": "פורטפוליו",
@@ -178,14 +184,12 @@
         "copy_phone": "העתק מספר טלפון",
         "copy_email": "העתק כתובת דוא״ל",
         "copy_address": "העתק כתובת",
-        "copy_fax": "העתק מספר פקס",
         "details_heading": "פרטי התקשרות",
         "address_label": "כתובת",
         "address_line1": "רח' נחום חפצדי 17, ירושלים",
         "address_line2": "מגדל רם - קומה 11",
         "phone_label": "טלפון",
-        "email_label": "דוא״ל",
-        "fax_label": "פקס"
+        "email_label": "דוא״ל"
     },
     "footer": {
         "brand_description": "משרד עורכי הדין ישראל עשור ושות׳ — מומחים בהתחדשות עירונית, מיסוי מקרקעין ומס הכנסה. ליווי משפטי מקצועי מהשלב הראשון ועד קבלת המפתח.",
