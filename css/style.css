@@ -79,7 +79,10 @@ h1, h2, h3, h4 {
 }
 
 .section-eyebrow {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
     text-align: center;
     color: var(--gold);
     font-family: var(--font-body);
@@ -88,6 +91,20 @@ h1, h2, h3, h4 {
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 14px;
+}
+
+.section-eyebrow::before,
+.section-eyebrow::after {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+    flex: 0 0 auto;
+}
+
+.section-eyebrow::after {
+    background: linear-gradient(90deg, var(--gold), transparent);
 }
 
 .section-title {
@@ -125,6 +142,27 @@ section {
 @media (max-width: 768px) {
     section { padding: 72px 0; }
     .section-title { font-size: 2rem; }
+}
+
+/* ===== Scroll Progress Bar ===== */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    z-index: 1100;
+    background: transparent;
+    pointer-events: none;
+}
+
+.scroll-progress span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--gold-light), var(--gold), var(--gold-dark));
+    box-shadow: 0 0 10px rgba(184, 148, 63, 0.6);
+    transition: width 0.08s linear;
 }
 
 /* ===== Header ===== */
@@ -226,8 +264,12 @@ section {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 22px;
     list-style: none;
+}
+
+@media (min-width: 1280px) {
+    .nav-links { gap: 28px; }
 }
 
 .nav-links a {
@@ -851,6 +893,24 @@ section {
     background: var(--navy-dark);
     position: relative;
     overflow: hidden;
+    padding: 120px 0;
+}
+
+.about .section-eyebrow {
+    color: var(--gold-light);
+    position: relative;
+    z-index: 2;
+}
+
+.about .section-title {
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.about .gold-line {
+    position: relative;
+    z-index: 2;
 }
 
 /* Full-section photo slideshow */
